@@ -1,0 +1,18 @@
+public class StudentResult {
+
+    public static String getGrade(int marks) {
+
+        if (marks < 0 || marks > 100) {
+            return "Invalid";
+        }
+
+        if (marks > 90) return "A";   // should be >= 90
+        else if (marks >= 75) return "B";
+        else if (marks >= 50) return "C";
+        else return "Fail";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getGrade(90)); // Problem case
+    }
+}
