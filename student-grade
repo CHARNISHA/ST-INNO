@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StudentResult {
 
     public static String getGrade(int marks) {
@@ -13,6 +15,16 @@ public class StudentResult {
     }
 
     public static void main(String[] args) {
-        System.out.println(getGrade(90)); // Problem case
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+
+        String result = getGrade(marks);
+
+        System.out.println("Grade: " + result);
+
+        sc.close();
     }
 }
